@@ -115,9 +115,9 @@
     -->
     <string name="mfc_aid_title_format">MIFARE Classic AID: %1$s #%2$d</string>
 
-    <!-- Translators: %s replaced with a decimal or hexadecimal number -->
+    <!-- Translators: %s is replaced with a decimal or hexadecimal number -->
     <string name="file_title_format">File: %s</string>
-    <!-- Translators: %s replaced with a decimal or hexadecimal number. Displayed when we didn't
+    <!-- Translators: %s is replaced with a decimal or hexadecimal number. Displayed when we didn't
     have a correct key to unlock the memory page. -->
     <string name="unauthorized_file_title_format">File: %s (unauthorized)</string>
     <!-- Translators: %1$s is replaced with a decimal or hexadecimal number. %2$s is replaced
@@ -135,36 +135,36 @@
     <string name="unauthorized_page_title_format">Page: %s (unauthorized)</string>
     <string name="nfcv_system_info">System info</string>
 
-    <!-- Translators: %s replaced with a decimal or hexadecimal number -->
+    <!-- Translators: %s is replaced with a decimal or hexadecimal number -->
     <string name="sector_title_format">Sector: %s</string>
-    <!-- Translators: %s replaced with a decimal or hexadecimal number. Displayed when we didn't
+    <!-- Translators: %s is replaced with a decimal or hexadecimal number. Displayed when we didn't
     have a correct key to unlock the sector. -->
     <string name="unauthorized_sector_title_format">Sector: %s (unauthorized)</string>
-    <!-- Translators: %s replaced with a decimal or hexadecimal number. Displayed when the sector
+    <!-- Translators: %s is replaced with a decimal or hexadecimal number. Displayed when the sector
     was empty / had only null data. -->
     <string name="sector_title_format_empty">Sector: %s (empty)</string>
     <!-- Translators: %1$s is replaced with a decimal or hexadecimal number. %2$s is replaced
     with error text. -->
     <string name="invalid_sector_title_format">Sector: %1$s (invalid: %2$s)</string>
 
-    <!-- Translators: the first parameter is a hexadecimal number, the second parameter is a string
-    describing a "well known" system code. eg: "System: 0x3 (Suica)" -->
+    <!-- Translators: The first parameter is a hexadecimal number, the second parameter is a string
+    describing a "well known" system code. E.g: "System: 0x3 (Suica)" -->
     <string name="felica_system_title_format">System: %1$s (%2$s)</string>
-    <!-- Translators: the first parameter is a hexadecimal number, the second parameter is a string
+    <!-- Translators: The first parameter is a hexadecimal number, the second parameter is a string
     describing a "well known" service code. eg: "Service: 0x90f (Suica History)" -->
     <string name="felica_service_title_format">Service: %1$s (%2$s)</string>
-    <!-- Translators: the first parameter is a hexadecimal number.
+    <!-- Translators: The first parameter is a hexadecimal number.
          This is synonym of "entry".  -->
     <string name="record_title_format">Record: %s</string>
     <string name="binary_title_format">Binary data</string>
     <string name="info">Info</string>
-    <!-- Translators: These are both dates, eg: "Valid from 3/12/2017 to 3/3/2018". Dates are
+    <!-- Translators: These are both dates, e.g: "Valid from 3/12/2017 to 3/3/2018". Dates are
      formatted according to user preferences. -->
     <string name="valid_format">Valid from %1$s to %2$s</string>
-    <!-- Translators: This is an end date, eg: "Valid until 3/3/2018". Dates are formatted according
+    <!-- Translators: This is an end date, e.g: "Valid until 3/3/2018". Dates are formatted according
      to user preferences. -->
     <string name="valid_to_format">Valid until %1$s</string>
-    <!-- Translators: This is a start date, eg: "Valid from 3/12/2017". Dates are formatted according
+    <!-- Translators: This is a start date, e.g: "Valid from 3/12/2017". Dates are formatted according
      to user preferences. -->
     <string name="valid_from_format">Valid from %1$s</string>
     <!-- Translations: Those are locations. E.g. "Valid from Awesome city to Home village" -->
@@ -182,7 +182,7 @@
     <string name="keys">Keys</string>
     <string name="delete">Delete</string>
     <string name="delete_key_confirm_title">Really delete key?</string>
-    <!-- Translators: shown when a trip attempt was denied (mainly due to insufficient funds.) -->
+    <!-- Translators: Shown when a trip attempt was denied (mainly due to insufficient funds.) -->
     <string name="rejected">Rejected</string>
     <!--
     Translators:
@@ -280,7 +280,7 @@
     <string name="speak_balance_summary">When you scan a card, the balance will be automatically read aloud. This works even when a screen reader is not running.</string>
 
     <!--
-    TRANSLATORS: "Place names" are proper nouns, eg: "Beijing", "Los Angeles", "Sydney", "Tokyo".
+    TRANSLATORS: "Place names" are proper nouns, e.g: "Beijing", "Los Angeles", "Sydney", "Tokyo".
     -->
     <string name="localise_places">Add language hints to place names</string>
 
@@ -316,7 +316,7 @@
 
     <string name="lang_override">Application language</string>
     <string name="lang_override_desc">Change the application language. Needs application restart to apply</string>
-    <!-- Translators: use system language for app language. -->
+    <!-- Translators: Use system language as app language. -->
     <string name="lang_default">System default</string>
 
     <!-- Translators: This is shown when an unsupported type of card is scanned, and that we were unable to read it at all, let alone parse its content. -->
@@ -332,11 +332,11 @@
     <string name="mfc_reading_blocks">Reading sector %d…</string>
     <string name="mfc_rwid">Read: %1$s, write: %2$s, increment: %3$s, decrement: %4$s</string>
     <string name="mfc_key_never">never</string>
-    <!-- Translators: it's access key for Mifare Classic. Every sector can
-         have up to 2 keys: key A and key B. -->
+    <!-- Translators: It's access key for Mifare Classic. Every sector can
+         have up to 2 keys: Key A and key B. -->
     <string name="mfc_key_a">key A</string>
     <string name="mfc_key_b">key B</string>
-    <!-- Translators: key A or key B. -->
+    <!-- Translators: Key A or key B. -->
     <string name="mfc_key_ab">key A|B</string>
 
     <string name="iso14a_detect">Detecting ISO 14443 card type…</string>
@@ -346,7 +346,7 @@
 
     <string name="mfu_detect">Detecting MIFARE Ultralight card type…</string>
     <string name="mfu_reading">Reading MIFARE Ultralight card…</string>
-    <string name="vicinity_reading">Reading Vicinity card…</string>
+    <string name="vicinity_reading">Reading vicinity card…</string>
     <!-- Translators: This is substituted with the name of a card, like "Unlocking Leap card…" -->
     <string name="mfd_unlocking">Unlocking <xliff:g id="card_name" example="Leap">%s</xliff:g> card…</string>
 
@@ -361,7 +361,7 @@
     </string>
     <string name="show_partial_data">Show incomplete data</string>
 
-    <!-- Translators: this is a short suffix for milliseconds, "%s" will display the number to
+    <!-- Translators: This is a short suffix for milliseconds, "%s" will display the number to
     one decimal place (in localized form). -->
     <plurals name="milliseconds_short">
         <item quantity="one"><xliff:g id="milliseconds" example="1.0">%s</xliff:g> ms</item>
@@ -369,14 +369,14 @@
     </plurals>
 
     <!--
-    Translators: shown in place of a real card number in some lists when obfuscation is enabled.
+    Translators: Shown in place of a real card number in some lists when obfuscation is enabled.
     -->
     <string name="hidden_card_number">Hidden card number</string>
     <plurals name="hidden_key_data">
         <item quantity="one">Hidden key data (<xliff:g id="count" example="1">%d</xliff:g> byte)</item>
         <item quantity="other">Hidden key data (<xliff:g id="count" example="3">%d</xliff:g> bytes)</item>
     </plurals>
-    <!-- Translators: "key" is an encryption key, which is displayed below this label. -->
+    <!-- Translators: "Key" is an encryption key, which is displayed below this label. -->
     <string name="key_data">Key data</string>
 
     <!--
@@ -432,7 +432,7 @@
     <!-- Translators: It's about theme that mimicks FareBot appearence. -->
     <string name="theme_farebot" translatable="false">FareBot</string>
 
-    <!-- Translators: do not translate -->
+    <!-- Translators: Do not translate -->
     <string-array name="theme_values" translatable="false">
         <item>dark</item>
         <item>light</item>
@@ -464,13 +464,13 @@
         <item quantity="other"><xliff:g id="count" example="3">%d</xliff:g> cards imported.</item>
     </plurals>
 
-    <!-- Translators: "block" is referring to a block of storage. -->
+    <!-- Translators: "Block" is referring to a block of storage. -->
     <plurals name="block_count">
         <item quantity="one">%d block</item>
         <item quantity="other">%d blocks</item>
     </plurals>
 
-    <!-- Translators: "record" is referring to structured unit of storage. -->
+    <!-- Translators: "Record" is referring to structured unit of storage. -->
     <plurals name="record_count">
         <item quantity="one">%d record</item>
         <item quantity="other">%d records</item>
@@ -484,7 +484,7 @@
         <item quantity="other">%d services</item>
     </plurals>
 
-    <!-- Translators: used as an accessibility label for a passengers icon -->
+    <!-- Translators: Used as an accessibility label for a passengers icon -->
     <plurals name="passengers">
         <item quantity="one">passenger</item>
         <item quantity="other">passengers</item>
@@ -593,9 +593,9 @@
     <string name="cepas_issuer_data">Issuer-specific data</string>
     <string name="cepas_purse_info">Purse info</string>
     <!-- Translators: %d is the index on the card. So we have purse 0,
-         purse 1,... on a single card. It's not a serial number of purse -->
+         purse 1,… on a single card. It's not a serial number of purse -->
     <string name="cepas_purse_num">CEPAS purse number %d</string>
-    <!-- Translators: this is a history of CEPAS purse with index %d. -->
+    <!-- Translators: This is a history of CEPAS purse with index %d. -->
     <string name="cepas_purse_num_history" tools:ignore="PluralsCandidate">CEPAS purse number %d history</string>
     <string name="cepas_can">Card Application Number (CAN)</string>
     <string name="cepas_csn">Card Serial Number (CSN)</string>
@@ -733,16 +733,16 @@
 
     -->
     <string name="trip_description">(From )<xliff:g id="start_station" example="Tokyo">%1$s</xliff:g> [→] (to )<xliff:g id="end_station" example="Osaka">%2$s</xliff:g></string>
-    <!-- Translators: it's used when departure point isn't known, eg: "to Central Station" -->
+    <!-- Translators: It's used when departure point isn't known, eg: "to Central Station" -->
     <string name="trip_description_unknown_start">to %s</string>
     <!--
-    Translators: it's used to show time in trip listing e.g. 12:35 - 12:51.
+    Translators: It's used to show time in trip listing e.g. 12:35 - 12:51.
     The time will be formatted according to user preferences.
     For RTL languages the arrow needs to be flipped and add RLM at the beginning.
     -->
     <string name="time_from_to"><xliff:g id="start_time" example="12:35">%1$s</xliff:g> → <xliff:g id="end_time" example="12:51">%2$s</xliff:g></string>
     <!--
-    Translators: it's used when departure time isn't known.
+    Translators: It's used when departure time isn't known.
     If "?" is the first character, it must be prefixed with "\".
     For RTL languages the arrow needs to be flipped and add RLM at the beginning.
     -->
@@ -960,7 +960,7 @@
     <string name="clipper_ticket_type_youth">Youth</string>
 
     <!--
-    Translators: the "ticket class" is one of: clipper_ticket_type_adult, clipper_ticket_type_senior,
+    Translators: The "ticket class" is one of: clipper_ticket_type_adult, clipper_ticket_type_senior,
     clipper_ticket_type_rtc, clipper_ticket_type_youth.
 
     eg: "Single-ride (Adult)"
@@ -969,7 +969,7 @@
     -->
     <string name="clipper_single">Single-ride (<xliff:g id="ticket_class" example="Adult">%1$s</xliff:g>)</string>
     <!--
-    Translators: the "ticket class" is one of: clipper_ticket_type_adult, clipper_ticket_type_senior,
+    Translators: The "ticket class" is one of: clipper_ticket_type_adult, clipper_ticket_type_senior,
     clipper_ticket_type_rtc, clipper_ticket_type_youth.
 
     eg: "Return (Adult)"
@@ -987,7 +987,7 @@
     <string name="card_note_clipper">Supports both plastic (reloadable) and paper (single-use cards issued by Golden Gate Ferry and Muni) Clipper cards.</string>
 
     <string name="ez_bus_number">Bus #%s</string>
-    <!-- Translators: when users gets into bus the maximum amount is charged
+    <!-- Translators: When users gets into bus the maximum amount is charged
          but when the user gets off the bus the fare is partially refunded
          depending on distance travelled. -->
     <string name="ez_bus_refund">Bus refund</string>
@@ -1014,13 +1014,13 @@
 
     <!-- Felica / Suica: These strings must only be used for Felica. -->
 
-    <!-- Translators: it's a ticketing card name in Japan. Japanese: スイカ
+    <!-- Translators: It's a ticketing card name in Japan. Japanese: スイカ
     May be transliterated -->
     <string name="card_name_suica">Suica</string>
-    <!-- Translators: it's a ticketing card name in Japan. Japanese: イコカ
+    <!-- Translators: It's a ticketing card name in Japan. Japanese: イコカ
     May be transliterated -->
     <string name="card_name_icoca">ICOCA</string>
-    <!-- Translators: it's a ticketing card name in Japan. Japanese: パスモ
+    <!-- Translators: It's a ticketing card name in Japan. Japanese: パスモ
     May be transliterated -->
     <string name="card_name_pasmo">PASMO</string>
 
@@ -1206,7 +1206,7 @@
         <item quantity="one">%d minute</item>
         <item quantity="other">%d minutes</item>
     </plurals>
-    <!-- Translators: this is inserted into strings "eTicket for %s" and "PeriodPass for %s". First argument is a string of letters e.g. ABC.
+    <!-- Translators: This is inserted into strings "eTicket for %s" and "PeriodPass for %s". First argument is a string of letters e.g. ABC.
          At most 8 zones. Second (hidden) argument is the number of zones, feel free to add it if grammar of your language requires it.
     -->
     <plurals name="hsl_zones">
@@ -1214,9 +1214,9 @@
         <item quantity="other">zones %s</item>
     </plurals>
     <string name="hsl_zone_station">Zone %s</string>
-    <!-- TRANSLATORS: argument is validity area, e.g. "zones ABC" or "Helsinki". -->
+    <!-- TRANSLATORS: Argument is validity area, e.g. "zones ABC" or "Helsinki". -->
     <string name="hsl_arvo_format">eTicket for %s</string>
-    <!-- TRANSLATORS: argument is validity area, e.g. "zones ABC" or "Helsinki". -->
+    <!-- TRANSLATORS: Argument is validity area, e.g. "zones ABC" or "Helsinki". -->
     <string name="hsl_kausi_format">PeriodPass for %s</string>
     <string name="hsl_language">Language</string>
     <string name="hsl_finnish">Finnish</string>
@@ -1317,17 +1317,17 @@
     -->
     <!-- Translators: regular / full fare type for Go Card (Brisbane, AU) -->
     <string name="seqgo_ticket_type_adult">Adult</string>
-    <!-- Translators: tourist full fare type for Go Card (Brisbane, AU). Both of these cards have
+    <!-- Translators: Tourist full fare type for Go Card (Brisbane, AU). Both of these cards have
     the same IDs:
     - go seeQ: https://translink.com.au/tickets-and-fares/ticket-types/visitors-and-tourists/go-seeq
     - go explore: https://translink.com.au/tickets-and-fares/ticket-types/visitors-and-tourists/go-explore
      -->
     <string name="seqgo_ticket_type_adult_explore">Adult Explore/seeQ</string>
-    <!-- Translators: adult discounted fare type for Go Card (Brisbane, AU) -->
+    <!-- Translators: Adult discounted fare type for Go Card (Brisbane, AU) -->
     <string name="seqgo_ticket_type_concession">Concession</string>
-    <!-- Translators: childrens' discounted fare type for Go Card (Brisbane, AU) -->
+    <!-- Translators: Childrens' discounted fare type for Go Card (Brisbane, AU) -->
     <string name="seqgo_ticket_type_child">Child</string>
-    <!-- Translators: seniors' discounted fare type for Go Card (Brisbane, AU) -->
+    <!-- Translators: Seniors' discounted fare type for Go Card (Brisbane, AU) -->
     <string name="seqgo_ticket_type_senior">Senior</string>
 
     <string name="seqgo_refill_manual">Manual top-up</string>
@@ -1400,7 +1400,7 @@
          card is banned or not.
     -->
     <string name="ovc_banned">Banned</string>
-    <!-- Translators: this are yes/no strings for previous 2 strings -->
+    <!-- Translators: These are yes/no strings for the previous 2 strings -->
     <string name="ovc_yes">Yes</string>
     <string name="ovc_no">No</string>
 
@@ -1443,7 +1443,7 @@
     <!-- GVB -->
     <!-- Translators: Dutch "OV-fietsabonnement" -->
     <string name="ovc_sub_fietssupplement">OV-fiets Season Ticket</string>
-    <!-- Defunct cards. They are no longer used but may still show up on old cards -->
+    <!-- Defunct cards. They are no longer used, but may still show up on old cards -->
     <!-- Translators: Dutch "DALU Dalkorting" -->
     <string name="ovc_sub_dalu_dalkorting">DALU Dalkorting</string>
     <!-- Translators: Dutch "Studenten OV-chipkaart week (2009)" -->
@@ -1470,7 +1470,7 @@
     <string name="compass_ticket_type_regular">Regular</string>
     <string name="compass_note">Single ride tickets only</string>
     <string name="expiry_date">Expiry date</string>
-    <!-- Translators: day ticket for all 3 zones. -->
+    <!-- Translators: Day ticket for all 3 zones. -->
     <string name="compass_sub_daypass">DayPass</string>
     <string name="compass_sub_one_zone">One Zone</string>
     <string name="compass_sub_two_zone">Two Zone</string>
@@ -1536,7 +1536,7 @@
     <!-- Translators: Attribute to describe the number of remaining trips on the card or subscription. -->
     <string name="remaining_trip_count">Trips remaining</string>
 
-    <!-- Translators: some cards allow only limited number of trips
+    <!-- Translators: Some cards allow only limited number of trips
          per day. First argument is number of remaining trips and second
          argument is the date to which limit applies. -->
     <plurals name="remaining_trip_on_day">
@@ -1594,15 +1594,16 @@
     -->
     <string name="subscription_expired">Expired</string>
 
-    <!-- Translators "Last used" is a date, time or date+time attribute -->
+    <!-- Translators: "Last used" is a date, time or date+time attribute -->
     <string name="last_used_on">Last used</string>
-    <string name="payment_method">Payment method</string>
+    <!-- Translators: "This signifies the payment method -->
+    <string name="payment_method">Payment</string>
     <string name="payment_method_cash">Cash</string>
     <string name="payment_method_credit_card">Credit card</string>
     <string name="payment_method_debit_card">Debit card</string>
     <string name="payment_method_transit_card">Transit card</string>
     <string name="payment_method_cheque">Cheque</string>
-    <!-- Translators: Free as in "gratis" (costing no money) -->
+    <!-- Translators: As in free of charge (costing no money) -->
     <string name="payment_method_free">Free</string>
 
     <!-- Translators: This refers to a person's name. -->
@@ -1695,7 +1696,7 @@
     <string name="led_shared_taxi">Saint Petersburg Shared Taxi</string>
 
     <string name="blank_mfu_card">Blank MIFARE Ultralight card</string>
-    <string name="blank_nfcv_card">Blank Vicinity card</string>
+    <string name="blank_nfcv_card">Blank vicinity card</string>
     <string name="blank_mfc_card">Blank MIFARE Classic card</string>
     <string name="blank_mfd_card">Blank MIFARE DESFire card</string>
     <string name="fully_blank_desc">
@@ -1923,7 +1924,7 @@
     <!-- Translators: Used for a list of unknown binary data tags -->
     <string name="unknown_tags">Unknown tags</string>
     <string name="emv_gpo_response">Get Processing Options (GPO) response</string>
-    <!-- Translators: argument is the tag ID sent in Get Data query. -->
+    <!-- Translators: The argument is the tag ID sent in Get Data query. -->
     <string name="emv_data_response">Get Data %s response</string>
 
     <string name="no_data_in_clipboard">No data in clipboard.</string>
@@ -1986,13 +1987,13 @@
     <string name="trip_counter">Trips counter</string>
     <string name="refill_counter">Refill counter</string>
     <string name="mifare_desfire">MIFARE DESFire</string>
-    <!-- Translators: type of card media, variant of FeliCa (フェリカ / Felicity Card) -->
+    <!-- Translators: Type of card media, variant of FeliCa (フェリカ / Felicity Card) -->
     <string name="card_media_felica_lite">FeliCa Lite</string>
     <string name="felica_lite_read_only">Read-only data</string>
     <string name="felica_lite_read_write">Re-writable data</string>
     <!-- Translators: NDEF = NFC Data Exchange Format -->
     <string name="card_format_ndef">NDEF</string>
-    <!-- Translators: area of card storage shared by Suica and Edy,
+    <!-- Translators: Area of card storage shared by Suica and Edy,
          possibly othewr systems as well. -->
     <string name="felica_system_common">Common Area (FeliCa Networks)</string>
 
@@ -2072,7 +2073,7 @@
     <string name="about_key_formats">About key formats…</string>
     <string name="invalid_json">Invalid JSON</string>
     <string name="invalid_key_file">Invalid keyfile</string>
-    <!-- Translators: "key file" is a file containing encryption keys. -->
+    <!-- Translators: "Key file" is a file containing encryption keys. -->
     <string name="key_file_empty">Empty keyfile!</string>
 
     <!-- Translators: Shown as a label for a group of keys that does not have any label or description. -->
@@ -2106,13 +2107,13 @@
     <string name="transfer">Transfer</string>
     <string name="copy_card_number">Copy card number</string>
     <string name="card_serial_number">Serial number</string>
-    <!-- Translators: we use it as a header when only serial can be read.
+    <!-- Translators: We use it as a header when only serial can be read.
          Feel free to omit "card". -->
     <string name="serial_only_card_header">Serial-only card</string>
     <string name="serial_only_card_description_not_stored">This card only contains a serial number. Its balance and history are only stored in a central database.</string>
     <string name="serial_only_card_description_locked">This card is locked, and only the serial number can be read. Its balance and history might be stored on it, but are not accessible.</string>
     <string name="serial_only_card_description_more_research">Support for this card is in development, and currently only the serial number can be read.</string>
-    <!-- Translators: some card serial numbers are very long, this is shown as a list item for
+    <!-- Translators: Some card serial numbers are very long, this is shown as a list item for
     the full version of the card's serial number -->
     <string name="full_serial_number">Full serial number</string>
     <!-- Translators: Menu item to remove scans of the same card with identical data. -->
@@ -2141,9 +2142,9 @@
     -->
     <string name="card_name_samara_garden_dacha">Samara garden-dacha card</string>
 
-    <!-- Translators: it doesn't appear to have a brand name. More info:  transkart.ru -->
+    <!-- Translators: It doesn't appear to have a brand name. More info:  transkart.ru -->
     <string name="card_name_kazan">Kazan transport card</string>
-    <!-- Translators: card is issued but no ticket is loaded on it yet -->
+    <!-- Translators: Card is issued but no ticket is loaded on it yet -->
     <string name="kazan_blank">Blank</string>
 
     <!-- Translators: Orenburg (Оренбург) is a city in Russia.
@@ -2161,14 +2162,14 @@
     <string name="card_name_penza">Penza transport card</string>
     <string name="card_name_siticard">SitiCard</string>
     <string name="card_name_kirov">Kirov transport card</string>
-    <!-- Translators: card name used in Ekaterinburg, Russia. -->
+    <!-- Translators: Card name used in Ekaterinburg, Russia. -->
     <string name="card_name_ekarta">Ekarta</string>
     <string name="siticard_aerial_tramway">Aerial tramway</string>
-    <!-- Translators: this is balance usable for travelling in Nizhny Novgorod
+    <!-- Translators: This is balance usable for travelling in Nizhny Novgorod
          and after the fare is deducted once, all transfers within 60 minutes
          are free. -->
     <string name="siticard_adult_60min_xfer_purse">60-minute transfer purse (adult)</string>
-    <!-- Translators: this is balance usable for travelling in Nizhny Novgorod
+    <!-- Translators: This is balance usable for travelling in Nizhny Novgorod
          and after the fare is deducted once, all transfers within 90 minutes
          are free. -->
     <string name="siticard_adult_90min_xfer_purse">90-minute transfer purse (adult)</string>
@@ -2178,7 +2179,7 @@
     <string name="siticard_edinyj_16_trips">Edinyj 16 trips</string>
     <string name="siticard_edinyj_30_trips">Edinyj 30 trips</string>
     <string name="siticard_edinyj_3_days">Edinyj 3 days</string>
-    <!-- Translators: transit card for intercity trolleybus operating in
+    <!-- Translators: Transit card for intercity trolleybus operating in
          Crimea. -->
     <string name="card_name_crimea_trolleybus">Crimea Trolleybus Card</string>
     <!-- Translators: "Parus" is the name of the card and it's issued
@@ -2187,7 +2188,7 @@
     <string name="card_name_crimea_parus_school">Parus school card</string>
     <string name="card_name_yoshkar_ola">Yoshkar-Ola transport card</string>
     <string name="card_name_umarsh">Umarsh</string>
-    <!-- Translators: card used by young people going to mandatory school. -->
+    <!-- Translators: Card used by young people going to mandatory school. -->
     <string name="umarsh_school">School student</string>
     <string name="umarsh_student">Student</string>
     <string name="umarsh_adult">Adult</string>
@@ -2212,14 +2213,14 @@
     <string name="venezia_profile_normal">Normal, out of region</string>
     <!-- Rkf specific strings -->
     <string name="rkf_card_status">Card status</string>
-    <!-- Translators: describes the status of a card or transaction.
+    <!-- Translators: Describes the status of a card or transaction.
          This one is basically "normal function". -->
     <string name="rkf_status_ok">OK, enabled</string>
-    <!-- Translators: describes the status of a card or transaction -->
+    <!-- Translators: Describes the status of a card or transaction -->
     <string name="rkf_status_action_pending">Action pending</string>
-    <!-- Translators: describes the status of a card or transaction -->
+    <!-- Translators: Describes the status of a card or transaction -->
     <string name="rkf_status_temp_disabled">Temporarily or permanently suspended</string>
-    <!-- Translators: describes the status of a card or transaction -->
+    <!-- Translators: Describes the status of a card or transaction -->
     <string name="rkf_status_not_ok">Permanently suspended</string>
     <string name="location_tbilisi">Tbilisi, Georgia</string>
     <!-- Translators: MCT = MIFARE Classic Tool - an Android MIFARE Classic card reader / writer -->
@@ -2240,28 +2241,28 @@
          In most cases name and title of the screens match but main screen is titled "Metrodroid", hence this is
          main screen name for back button -->
     <string name="ios_main_screen_back">Main</string>
-    <!-- Translators: on iOS scanning is possible only on special system dialog. This is a title to open that dialog
+    <!-- Translators: On iOS scanning is possible only on special system dialog. This is a title to open that dialog
          and scan the card -->
     <string name="ios_scan_card">Scan card</string>
-    <!-- Translators: on iOS we need to shortly explain to the user why we use NFC -->
+    <!-- Translators: On iOS we need to shortly explain to the user why we use NFC -->
     <string name="ios_nfc_usage">App to show balance on transit cards</string>
     <!-- Translators: label for menu button on iOS. Android simply shows 3 dots. -->
     <string name="ios_menu_button">More</string>
-    <!-- Translators: top label on ios above the menu. -->
+    <!-- Translators: Top label on iOS above the menu. -->
     <string name="ios_menu_title">Menu</string>
-    <!-- Translators: label for menu item to close the menu. On Android user would simply tap outside the menu. -->
+    <!-- Translators: Label for menu item to close the menu. On Android user would simply tap outside the menu. -->
     <string name="ios_menu_cancel">Cancel</string>
-    <!-- Translators: shown on error dialog -->
+    <!-- Translators: Shown on error dialog -->
     <string name="ios_error_ok">OK</string>
     <string name="ios_nfcreader_connection_error">Connection error: %s</string>
     <!-- Translators: E.g. Connecting to Mifare DESFire. -->
     <string name="ios_nfcreader_connecting">Connecting to %s</string>
     <!-- Translators: E.g. Reading Mifare DESFire. -->
     <string name="ios_nfcreader_reading">Reading %s</string>
-    <!-- Translators: message in scanning dialog on iOS. -->
+    <!-- Translators: Message in scanning dialog on iOS. -->
     <string name="ios_nfcreader_tap">Tap your card</string>
     <string name="ios_nfcreader_exception">Got exception: %s</string>
-    <string name="ios_unknown_mifare">Unknown Mifare: %s</string>
+    <string name="ios_unknown_mifare">Unknown MIFARE card: %s</string>
     <string name="ios_unknown_tag">Unknown tag type: %s</string>
 
     <string name="exported_at">Exported by Metrodroid at %s</string>
@@ -2295,7 +2296,7 @@
     <string name="russia_region_79_jewish_autonomous">Jewish Autonomous Oblast</string>
     <string name="umarsh_91_crimea">Crimea</string>
 
-    <!-- Translators:  this number isn't anywhere on the card but is
+    <!-- Translators: This number isn't anywhere on the card but is
          printed on the refill receipt as "CardNo". -->
     <string name="touchngo_cardno">Alternative number (\"CardNo\")</string>
     <string name="unsupported_tag_message">This tag is currently unsupported by Metrodroid.\n
@@ -2303,9 +2304,9 @@
         Supported technologies:\n
         %2$s
     </string>
-    <string name="unknown_ultralight_message">Unknown Mifare Ultralight tag</string>
+    <string name="unknown_ultralight_message">Unknown MIFARE Ultralight tag</string>
     <string name="nfc_connection_failed">NFC connection to %s failed</string>
-    <!-- Translators: label above trips where date isn't known. -->
+    <!-- Translators: Label above trips where date isn't known. -->
     <string name="unknown_date_title">Unknown date</string>
 
     <!--
@@ -2353,13 +2354,13 @@
         blue
     </string>
 
-    <!-- Translators:  first argument is sector name e.g. "Montparnasse", second one is station numeric ID. -->
+    <!-- Translators: First argument is sector name e.g. "Montparnasse", second one is station numeric ID. -->
     <string name="navigo_sector_station_id">Sector %1$s, station ID %2$d</string>
-    <!-- Translators:  first argument is sector numeric ID, second one is station numeric ID. -->
+    <!-- Translators: First argument is sector numeric ID, second one is station numeric ID. -->
     <string name="navigo_sector_id_station_id">Sector ID %1$d, station ID %2$d</string>
-    <!-- Translators: ticket for the whole day. French "Forfait jour". -->
+    <!-- Translators: Ticket for the whole day. French "Forfait jour". -->
     <string name="navigo_forfait_jour">Day ticket</string>
-    <!-- Translators: ticket for long period. French "Forfait". -->
+    <!-- Translators: Ticket for long period. French "Forfait". -->
     <string name="navigo_forfait">Season ticket</string>
     <!-- Translators: French "Billet Tarif Normal" -->
     <string name="oura_billet_tarif_normal">Normal-price ticket</string>
@@ -2381,7 +2382,7 @@
 
     <string name="ricaricami_single_urban">Urban ticket</string>
     <string name="ricaricami_daily_urban">Urban daily ticket</string>
-    <!-- Translators: a ticket allowing to travel on any 6 out of 7
+    <!-- Translators: A ticket allowing to travel on any 6 out of 7
          days of the week but only 2 rides per day. -->
     <string name="ricaricami_urban_2x6">Urban weekly 2x6 ticket</string>
     <string name="ricaricami_yearly_urban">Urban annual subscription</string>
@@ -2397,7 +2398,7 @@
     <string name="venezia_rete_unica_100min">100-minute Rete Unica</string>
     <string name="venezia_bus_ticket_75min">75-minute bus ticket</string>
     <string name="venezia_airport_bus_ticket">Airport bus ticket</string>
-    <!-- Translators: book of 10 single tickets for traghetti (
+    <!-- Translators: Book of 10 single tickets for traghetti (
          short boat trips which cross the canals of Venice).
          Italian: Carnet Traghetto
     -->
@@ -2430,10 +2431,10 @@
     <string name="large_file_yes">Load anyway (risk crashing)</string>
     <string name="large_file_no">Cancel (safe)</string>
     <string name="app_logo_description">Metrodroid logo</string>
-    <!-- Translators: used as contentDescription for arrow indicating
+    <!-- Translators: Used as contentDescription for arrow indicating
          collapsed list. -->
     <string name="closed_arrow">Collapsed list</string>
-    <!-- Translators: used as contentDescription for arrow indicating
+    <!-- Translators: Used as contentDescription for arrow indicating
          open list. -->
     <string name="open_arrow">Open list</string>
 </resources>
