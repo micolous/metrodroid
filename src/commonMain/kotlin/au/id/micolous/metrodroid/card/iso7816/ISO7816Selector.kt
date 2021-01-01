@@ -21,7 +21,8 @@ package au.id.micolous.metrodroid.card.iso7816
 
 import au.id.micolous.metrodroid.util.ImmutableByteArray
 import kotlinx.serialization.*
-import kotlinx.serialization.internal.StringDescriptor
+import kotlinx.serialization.descriptors.*
+import kotlinx.serialization.encoding.*
 
 @Serializable(with = ISO7816Selector.Companion::class)
 data class ISO7816Selector (private val path: List<ISO7816SelectorElement>) {
@@ -94,11 +95,12 @@ data class ISO7816Selector (private val path: List<ISO7816SelectorElement>) {
         fun makeSelector(folder: ImmutableByteArray, file: Int): ISO7816Selector =
                 ISO7816Selector(listOf(ISO7816SelectorByName(folder), ISO7816SelectorById(file)))
 
+        @OptIn(kotlinx.serialization.InternalSerializationApi::class)
         override val descriptor: SerialDescriptor =
-                StringDescriptor.withName("ISO7816Selector")
+            buildSerialDescriptor("ISO7816Selector", PrimitiveKind.STRING)
 
-        override fun serialize(encoder: Encoder, obj: ISO7816Selector) {
-            encoder.encodeString(obj.formatString())
+        override fun serialize(encoder: Encoder, value: ISO7816Selector) {
+            encoder.encodeString(value.formatString())
         }
 
         override fun deserialize(decoder: Decoder): ISO7816Selector = fromString(decoder.decodeString())

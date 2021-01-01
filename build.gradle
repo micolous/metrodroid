@@ -10,17 +10,17 @@ allprojects {
 
 buildscript {
     ext {
-        kotlin_version = '1.3.41'
-        kotlinio_version = '0.1.9-1.3.40-eap-67'
-        kotlinserial_version = '0.11.1-1.3.40-eap-107'
-        coroutines_version = '1.3.0'
+        kotlin_version = '1.4.0'
+        kotlinio_version = '0.1.16'
+        kotlinserial_version = '1.0.1'
+        coroutines_version = '1.4.2'
         lint_version = '26.2.1'
         support_version = '28.0.0'
         android_test_version = '1.2.0'
-        build_version = '29.0.0'
+        build_version = '29.0.2'
         android_sdk_version = 29
         android_min_version = 16
-        android_gradle_version = '3.5.0'
+        android_gradle_version = '4.1.1'
         protobuf_version = '3.10.0-rc-1'
         protobuf_gradle_version = '0.8.10'
     }
@@ -34,7 +34,7 @@ buildscript {
         classpath "com.google.protobuf:protobuf-gradle-plugin:$protobuf_gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
-        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.6'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:2.0.0'
     }
 }
 
@@ -226,9 +226,10 @@ dependencies {
     implementation project(':material-design-icons')
     implementation project(':proto')
 
+    implementation "org.jetbrains.kotlinx:kotlinx-io:$kotlinio_version"
+
     implementation 'com.github.bmelnychuk:atv:1.2.9'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     androidTestUtil "androidx.test:orchestrator:$android_test_version"
     androidTestImplementation "androidx.test:rules:$android_test_version"
@@ -289,8 +290,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
-                api "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$kotlinserial_version"
+                api "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinserial_version"
                 api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
                 api "org.jetbrains.kotlinx:kotlinx-io:$kotlinio_version"
             }
@@ -302,18 +302,14 @@ kotlin {
             dependencies {
                 api "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
                 api "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
-                api "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
                 api "org.jetbrains.kotlinx:kotlinx-io:$kotlinio_version"
             }
         }
 
         androidMain {
             dependencies {
-                implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-io-jvm:$kotlinio_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlinserial_version"
             }
 
             kotlin.srcDirs += new File(generatedLocalizeDir, 'androidMain/kotlin')
@@ -322,11 +318,6 @@ kotlin {
 
         iOSMain {
             dependencies {
-                implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-io-native:$kotlinio_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$kotlinserial_version"
                 implementation project(':proto')
             }
 
@@ -335,21 +326,15 @@ kotlin {
 
         iOSTest {
             dependencies {
-                implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-io-native:$kotlinio_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$kotlinserial_version"
                 implementation project(':proto')
             } 
         }
 
         androidTest {
             dependencies {
-                implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlinserial_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-io-jvm:$kotlinio_version"
                 implementation 'org.jetbrains.kotlin:kotlin-test-junit'
                 implementation project(':proto')
@@ -377,9 +362,7 @@ kotlin {
 
         jvmCliMain {
             dependencies {
-                implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlinserial_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-io-jvm:$kotlinio_version"
                 implementation "com.google.protobuf:protobuf-javalite:$protobuf_version"
                 implementation 'com.github.ajalt:clikt:2.1.0'
@@ -504,7 +487,7 @@ task packForXCode(type: Sync) {
 
 tasks.build.dependsOn packForXCode
 
-task iOSTest {
+task iOSSimulatorTest {
     def device = project.findProperty("iosDevice")?.toString() ?: "iPhone 8"
     dependsOn 'linkDebugTestIOS'
     group = JavaBasePlugin.VERIFICATION_GROUP

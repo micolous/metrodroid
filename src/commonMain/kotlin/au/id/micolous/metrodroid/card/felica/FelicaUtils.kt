@@ -25,7 +25,7 @@ import au.id.micolous.metrodroid.transit.edy.EdyTransitData
 import au.id.micolous.metrodroid.transit.kmt.KMTTransitData
 import au.id.micolous.metrodroid.transit.mrtj.MRTJTransitData
 import au.id.micolous.metrodroid.transit.octopus.OctopusTransitData
-import au.id.micolous.metrodroid.transit.suica.SuicaTransitData
+import au.id.micolous.metrodroid.transit.suica.*
 
 /**
  * Utilities for working with FeliCa cards.
@@ -43,7 +43,10 @@ object FelicaUtils {
      */
     fun getFriendlySystemName(systemCode: Int): StringResource {
         return when (systemCode) {
-            SuicaTransitData.SYSTEMCODE_SUICA -> R.string.card_name_suica
+            SYSTEMCODE_SUICA -> R.string.felica_system_cybernet
+            SYSTEMCODE_SUICA_UNKNOWN -> R.string.card_name_suica
+            SYSTEMCODE_HAYAKAKEN -> R.string.card_name_hayakaken
+            EdyTransitData.SYSTEMCODE_EDY_EMPTY -> R.string.card_name_edy
             FelicaConsts.SYSTEMCODE_COMMON -> R.string.felica_system_common
             FelicaConsts.SYSTEMCODE_FELICA_LITE -> R.string.card_media_felica_lite
             OctopusTransitData.SYSTEMCODE_OCTOPUS -> R.string.card_name_octopus
@@ -69,9 +72,11 @@ object FelicaUtils {
      */
     fun getFriendlyServiceName(systemCode: Int, serviceCode: Int): StringResource {
         return when (systemCode) {
-            SuicaTransitData.SYSTEMCODE_SUICA -> when (serviceCode) {
-                SuicaTransitData.SERVICE_SUICA_HISTORY -> R.string.suica_file_history
-                SuicaTransitData.SERVICE_SUICA_INOUT -> R.string.suica_file_in_out
+            SYSTEMCODE_SUICA -> when (serviceCode) {
+                SERVICE_SUICA_ID -> R.string.suica_file_id
+                SERVICE_SUICA_HISTORY -> R.string.suica_file_history
+                SERVICE_SUICA_INOUT -> R.string.suica_file_in_out
+                SERVICE_SUICA_ADMISSION -> R.string.suica_file_admission
                 else -> R.string.unknown
             }
 

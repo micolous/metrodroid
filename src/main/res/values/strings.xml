@@ -792,6 +792,14 @@
     <string name="location_finland">Finland</string>
     <string name="location_france">France</string>
     <string name="location_fribourg_ch">Fribourg, Switzerland</string>
+    <!--
+    Translators: This refers to the city of Fukuoka. This is in the prefecture of the same name.
+     -->
+    <string name="location_fukuoka_city">Fukuoka, Japan</string>
+    <!--
+    Translators: This refers to the prefecture of Fukuoka. It has a city of the same name inside.
+     -->
+    <string name="location_fukuoka_prefecture">Fukuoka, Japan</string>
     <string name="location_denmark">Denmark</string>
     <string name="location_gauteng">Gauteng, South Africa</string>
     <string name="location_germany">Germany</string>
@@ -824,6 +832,7 @@
     <string name="location_minneapolis">Minneapolis, MN, USA</string>
     <string name="location_montpellier">Montpellier, France</string>
     <string name="location_moscow">Moscow, Russia</string>
+    <string name="location_nagoya">Nagoya, Japan</string>
     <string name="location_nizhniy_novgorod">Nizhniy Novgorod, Russia</string>
     <string name="location_orenburg">Orenburg, Russia</string>
     <string name="location_orlando">Orlando, FL, USA</string>
@@ -1007,6 +1016,9 @@
     <string name="ez_retail_purchase">Retail purchase</string>
     <string name="ez_service_charge">Service charge</string>
 
+    <!-- Translators: name of a pre-paid debige card in Japan. Name is only in English.
+    May be transliterated. https://en.wikipedia.org/wiki/Edy -->
+    <string name="card_name_edy">Edy</string>
     <!-- Translators: Describes the name of a file. This file contains the transaction history on
     the card. Edy is a pre-paid debit card in Japan. -->
     <string name="edy_file_history">Edy history</string>
@@ -1017,17 +1029,43 @@
     of the purse stored on this card. Edy is a pre-paid debit card in Japan. -->
     <string name="edy_file_purse_balance">Edy purse balance</string>
 
-    <!-- Felica / Suica: These strings must only be used for Felica. -->
-
-    <!-- Translators: it's a ticketing card name in Japan. Japanese: スイカ
-    May be transliterated -->
-    <string name="card_name_suica">Suica</string>
-    <!-- Translators: it's a ticketing card name in Japan. Japanese: イコカ
-    May be transliterated -->
+    <!-- Translators: "IC" is a network of interoperable transit cards in Japan.
+    Cards either have an IC logo, or the letters "I" and "C" somewhere in their name. -->
+    <string name="card_name_japan_ic">Japan IC</string>
+    <!-- Translators: transit card used in Fukuoka, Japan. Japanese: はやかけん
+    May be transliterated. Card has both Japanese and English names printed on it. -->
+    <string name="card_name_hayakaken">Hayakaken</string>
+    <!-- Translators: name of a transit card used in Japan. Japanese: イコカ
+    May be transliterated. Card has only the English name printed on it, in all UPPER case. -->
     <string name="card_name_icoca">ICOCA</string>
-    <!-- Translators: it's a ticketing card name in Japan. Japanese: パスモ
-    May be transliterated -->
+    <!-- Translators: transit card used in Hokkaido Prefecture, Japan. Japanese: キタカ
+    May be transliterated. Card only has the English name printed on it. -->
+    <string name="card_name_kitaca">Kitaca</string>
+    <!-- Translators: transit card used in Nagoya, Japan. Japanese: マナカ
+    May be transliterated. Card only has the English name printed on it, in all lower case. -->
+    <string name="card_name_manaca">manaca</string>
+    <!-- Translators: transit card used in Fukuoka Prefecture, Japan. Japanese: ニモカ
+    May be transliterated. Card has only the English name printed on it, in all lower case. -->
+    <string name="card_name_nimoca">nimoca</string>
+    <!-- Translators: name of a transit card used in Japan. Japanese: パスモ
+    May be transliterated. Card has only the English name printed on it, in all UPPER case. -->
     <string name="card_name_pasmo">PASMO</string>
+    <!-- Translators: post-paid transit card used in Japan. Japanese: ピタパ
+    May be transliterated. Card only has the English name printed on it. -->
+    <string name="card_name_pitapa">PiTaPa</string>
+    <!-- Translators: name of a transit card used in Japan. Japanese: スイカ
+    May be transliterated. Card has only the English name printed on it. -->
+    <string name="card_name_suica">Suica</string>
+    <!-- Translators: transit card used in Fukuoka Prefecture, Japan. Japanese: スゴカ
+    May be transliterated. Card only has the English name printed on it, in all UPPER case. -->
+    <string name="card_name_sugoca">SUGOCA</string>
+    <!-- Translators: transit card used in Nagoya, Japan. Japanese
+    May be transliterated. Card only has the English name printed on it, and is referred to in
+    all UPPER case. -->
+    <string name="card_name_toica">TOICA</string>
+
+
+    <!-- Felica / Suica: These strings must only be used for Felica. -->
 
     <!--
         Translators:
@@ -1147,6 +1185,12 @@
     <!-- Translators: Describes the name of a file. This file contains the last use of the card to
     enter (in) or exit (out) a train station. Suica is a transit card in Japan. -->
     <string name="suica_file_in_out">Suica in/out</string>
+    <!-- Translators: Describes the name of a file. This file contains metadata describing the
+    identity of the card. Suica is a transit card in Japan. -->
+    <string name="suica_file_id">Suica identity</string>
+    <!-- Translators: Describes the name of a file. This file contains information about when and
+    where it was used to start a (railway) journey.  Suica is a transit card in Japan. -->
+    <string name="suica_file_admission">Suica admission</string>
 
     <!--
         Translators: https://en.wikipedia.org/wiki/Kereta_Commuter_Indonesia
@@ -2011,6 +2055,9 @@
     <!-- Translators: area of card storage shared by Suica and Edy,
          possibly othewr systems as well. -->
     <string name="felica_system_common">Common Area (FeliCa Networks)</string>
+    <!-- Translators: area of card storage used by Japanese transit cards, set up by Japanese
+    Railway Cybernetics Council (日本鉄道サイバネティクス協議会). -->
+    <string name="felica_system_cybernet">Japan IC (Cybernet)</string>
     <!--
     Translators:
     Used as a preference title. FeliCa divides cards into "systems" (~applications) and "services"

@@ -95,7 +95,7 @@ object FelicaConsts {
     // FeliCa Lite
     const val SYSTEMCODE_FELICA_LITE = 0x88b4
     // NDEF (NFC Data Exchange Format)
-    const val SYSTEMCODE_NDEF = 0x4000
+    const val SYSTEMCODE_NDEF = 0x12fc
     // Common Area (FeliCa Networks, Inc), used by IC (Suica) and Edy
     const val SYSTEMCODE_COMMON = 0xfe00
 

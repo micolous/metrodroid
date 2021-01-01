@@ -20,16 +20,18 @@
 package au.id.micolous.metrodroid.serializers
 
 import au.id.micolous.metrodroid.card.Card
-import au.id.micolous.metrodroid.util.readToString
+
 import kotlinx.io.InputStream
 import kotlinx.io.OutputStream
 import kotlinx.serialization.*
-import kotlinx.serialization.CompositeDecoder.Companion.READ_ALL
-import kotlinx.serialization.CompositeDecoder.Companion.READ_DONE
+import kotlinx.serialization.encoding.CompositeDecoder.Companion.READ_ALL
+import kotlinx.serialization.encoding.CompositeDecoder.Companion.READ_DONE
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.SerialClassDescImpl
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
-import kotlinx.serialization.json.JsonElement
 
 object JsonKotlinFormat : CardExporter, CardImporter {
     override fun writeCard(s: OutputStream, card: Card) {
@@ -67,13 +69,13 @@ abstract class MultiTypeSerializer<T : Any> : KSerializer<T> {
     }
 
     @Suppress("UNCHECKED_CAST")
-    override fun serialize(encoder: Encoder, obj: T) {
+    override fun serialize(encoder: Encoder, value: T) {
         @Suppress("NAME_SHADOWING")
         val output = encoder.beginStructure(descriptor)
-        val (str, serializer) = obj2serializer(obj)
+        val (str, serializer) = obj2serializer(value)
         output.encodeStringElement(descriptor, 0, str)
         output.encodeSerializableElement(descriptor, 1, serializer as KSerializer<T>,
-                obj)
+                value)
         output.endStructure(descriptor)
     }
 

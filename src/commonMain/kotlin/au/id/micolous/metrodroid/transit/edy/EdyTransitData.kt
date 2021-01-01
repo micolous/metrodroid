@@ -54,7 +54,8 @@ class EdyTransitData (override val trips: List<EdyTrip>,
         get() = "Edy"
 
     companion object {
-        // defines
+        const val SYSTEMCODE_EDY_EMPTY = 0x04c0
+
         const val SYSTEMCODE_EDY = FelicaConsts.SYSTEMCODE_COMMON
         const val SERVICE_EDY_ID = 0x110B
         const val SERVICE_EDY_BALANCE = 0x1317
@@ -62,7 +63,7 @@ class EdyTransitData (override val trips: List<EdyTrip>,
 
         private val CARD_INFO = CardInfo(
                 imageId = R.drawable.edy_card,
-                name = "Edy",
+                name = R.string.card_name_edy,
                 locationId = R.string.location_tokyo,
                 region = TransitRegion.JAPAN,
                 cardType = CardType.FeliCa)

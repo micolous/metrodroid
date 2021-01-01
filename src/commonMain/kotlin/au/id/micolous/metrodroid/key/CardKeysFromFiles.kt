@@ -21,8 +21,7 @@ package au.id.micolous.metrodroid.key
 
 import au.id.micolous.metrodroid.multi.Log
 import au.id.micolous.metrodroid.util.ImmutableByteArray
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.*
 
 interface CardKeysFileReader {
     fun readFile(fileName: String): String?
@@ -65,7 +64,7 @@ class CardKeysFromFiles(private val fileReader: CardKeysFileReader) : CardKeysRe
     private fun fromEmbed(dir: String, name: String): CardKeys? {
         return try {
             val inputStream = fileReader.readFile("$dir/$name.json") ?: return null
-            val k = CardKeys.jsonParser.parseJson(inputStream).jsonObject
+            val k = CardKeys.jsonParser.parseToJsonElement(inputStream).jsonObject
             CardKeys.fromJSON(k, "$dir/$name")
         } catch (e: Exception) {
             null
@@ -82,7 +81,7 @@ class CardKeysFromFiles(private val fileReader: CardKeysFileReader) : CardKeysRe
                     ctr--
                     if (ctr == targetId) {
                         val inputStream = fileReader.readFile("$dir/$file")
-                        val k = CardKeys.jsonParser.parseJson(inputStream ?: return null).jsonObject
+                        val k = CardKeys.jsonParser.parseToJsonElement(inputStream ?: return null).jsonObject
                         return CardKeys.fromJSON(k, "$dir/$file")
                     }
                 }
@@ -102,11 +101,11 @@ class CardKeysFromFiles(private val fileReader: CardKeysFileReader) : CardKeysRe
                     try {
                         ctr--
                         val b = fileReader.readFile("$dir/$it") ?: continue
-                        val k = CardKeys.jsonParser.parseJson(b).jsonObject
-                        val type = k.getPrimitiveOrNull(CardKeys.JSON_KEY_TYPE_KEY)?.contentOrNull
+                        val k = CardKeys.jsonParser.parseToJsonElement(b).jsonObject
+                        val type = k[CardKeys.JSON_KEY_TYPE_KEY]?.jsonPrimitive?.contentOrNull
                         val tagId = when (type) {
                             CardKeys.TYPE_MFC_STATIC -> CardKeys.CLASSIC_STATIC_TAG_ID
-                            else -> k.getPrimitiveOrNull(CardKeys.JSON_TAG_ID_KEY)?.contentOrNull
+                            else -> k[CardKeys.JSON_TAG_ID_KEY]?.jsonPrimitive?.contentOrNull
                         } ?: continue
                         cur += CardKeyRead(id = ctr, tagId = tagId, cardType = type ?: "", keyData = b,
                                 parsed = k, fileName = "$dir/$it")

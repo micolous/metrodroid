@@ -3,7 +3,7 @@
  *
  * Copyright 2011 Kazzz
  * Copyright 2014-2015 Eric Butler <eric@codebutler.com>
- * Copyright 2016-2018 Michael Farrell <micolous+git@gmail.com>
+ * Copyright 2016-2020 Michael Farrell <micolous+git@gmail.com>
  * Copyright 2018 Google Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -31,10 +31,13 @@ import au.id.micolous.metrodroid.card.felica.FelicaCardTransitFactory
 import au.id.micolous.metrodroid.multi.Localizer
 import au.id.micolous.metrodroid.multi.Parcelize
 import au.id.micolous.metrodroid.multi.R
+import au.id.micolous.metrodroid.multi.StringResource
 import au.id.micolous.metrodroid.util.NumberUtils
 
 @Parcelize
-class SuicaTransitData (override val trips: List<SuicaTrip>): TransitData() {
+class SuicaTransitData (
+    private val cardNameRes: StringResource,
+    override val trips: List<SuicaTrip>): TransitData() {
 
     public override val balance: TransitBalance?
         get() {
@@ -49,13 +52,14 @@ class SuicaTransitData (override val trips: List<SuicaTrip>): TransitData() {
     override val serialNumber: String?
         get() = null
 
-    // FIXME: Could be ICOCA, etc.
     override val cardName: String
-        get() = Localizer.localizeString(R.string.card_name_suica)
+        get() = Localizer.localizeString(cardNameRes)
 
     companion object {
         private fun parse(card: FelicaCard): SuicaTransitData? {
             val system = card.getSystem(SYSTEMCODE_SUICA) ?: return null
+            val name = system.services.keys.let(SuicaUtil::getCardName) ?: R.string.card_name_japan_ic
+
             val service = system.getService(SERVICE_SUICA_HISTORY)
             val tapService = system.getService(SERVICE_SUICA_INOUT)
 
@@ -182,49 +186,105 @@ class SuicaTransitData (override val trips: List<SuicaTrip>): TransitData() {
             Log.d(TAG, String.format(Locale.ENGLISH, "Matched %d taps", matchedTaps.size()));
             */
 
-            return SuicaTransitData(trips)
+            return SuicaTransitData(name, trips)
         }
 
+        private val HAYAKAKEN_CARD_INFO = CardInfo(
+            name = R.string.card_name_hayakaken,
+            locationId = R.string.location_fukuoka_city,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
 
         private val ICOCA_CARD_INFO = CardInfo(
-                imageId = R.drawable.icoca_card,
-                name = R.string.card_name_icoca,
-                locationId = R.string.location_kansai,
-                region = TransitRegion.JAPAN,
-                cardType = CardType.FeliCa)
+            imageId = R.drawable.icoca_card,
+            name = R.string.card_name_icoca,
+            locationId = R.string.location_kansai,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
 
-        private val SUICA_CARD_INFO = CardInfo(
-                imageId = R.drawable.suica_card,
-                name = R.string.card_name_suica,
-                locationId = R.string.location_tokyo,
-                region = TransitRegion.JAPAN,
-                cardType = CardType.FeliCa)
+        private val KITACA_CARD_INFO = CardInfo(
+            name = R.string.card_name_kitaca,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
+
+        private val MANACA_CARD_INFO = CardInfo(
+            name = R.string.card_name_manaca,
+            locationId = R.string.location_nagoya,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
+
+        private val NIMOCA_CARD_INFO = CardInfo(
+            name = R.string.card_name_nimoca,
+            locationId = R.string.location_fukuoka_prefecture,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
 
         private val PASMO_CARD_INFO = CardInfo(
-                imageId = R.drawable.pasmo_card,
-                name = R.string.card_name_pasmo,
-                locationId = R.string.location_tokyo,
-                region = TransitRegion.JAPAN,
-                cardType = CardType.FeliCa)
+            imageId = R.drawable.pasmo_card,
+            name = R.string.card_name_pasmo,
+            locationId = R.string.location_tokyo,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
 
-        const val SYSTEMCODE_SUICA = 0x0003
+        private val PITAPA_CARD_INFO = CardInfo(
+            name = R.string.card_name_pitapa,
+            locationId = R.string.location_kansai,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
 
-        const val SERVICE_SUICA_INOUT = 0x108f
-        const val SERVICE_SUICA_HISTORY = 0x090f
+        private val SUICA_CARD_INFO = CardInfo(
+            imageId = R.drawable.suica_card,
+            name = R.string.card_name_suica,
+            locationId = R.string.location_tokyo,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
+
+        private val SUGOCA_CARD_INFO = CardInfo(
+            name = R.string.card_name_sugoca,
+            locationId = R.string.location_fukuoka_prefecture,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
+
+        private val TOICA_CARD_INFO = CardInfo(
+            name = R.string.card_name_toica,
+            locationId = R.string.location_nagoya,
+            region = TransitRegion.JAPAN,
+            cardType = CardType.FeliCa)
 
         internal const val TAG = "SuicaTransitData"
 
         val FACTORY: FelicaCardTransitFactory = object : FelicaCardTransitFactory {
 
             override val allCards: List<CardInfo>
-                get() = listOf(SUICA_CARD_INFO, ICOCA_CARD_INFO, PASMO_CARD_INFO)
+                get() = listOf(
+                    // First card is shown when reading a card. Suica is the most well known of the
+                    // Japanese IC cards, so we show its picture.
+                    //
+                    // In earlyCheck, we don't have enough information yet to see if it is one of
+                    // the other cards.
+                    SUICA_CARD_INFO,
+
+                    // Other cards.
+                    HAYAKAKEN_CARD_INFO,
+                    ICOCA_CARD_INFO,
+                    KITACA_CARD_INFO,
+                    MANACA_CARD_INFO,
+                    NIMOCA_CARD_INFO,
+                    PASMO_CARD_INFO,
+                    PITAPA_CARD_INFO,
+                    SUGOCA_CARD_INFO,
+                    TOICA_CARD_INFO)
 
             override fun earlyCheck(systemCodes: List<Int>) = SYSTEMCODE_SUICA in systemCodes
 
             override fun parseTransitData(card: FelicaCard) = parse(card)
 
             override fun parseTransitIdentity(card: FelicaCard): TransitIdentity {
-                return TransitIdentity(Localizer.localizeString(R.string.card_name_suica), null) // FIXME: Could be ICOCA, etc.
+                return TransitIdentity(
+                    Localizer.localizeString(
+                        card.systems[SYSTEMCODE_SUICA]?.services?.keys?.let(
+                            SuicaUtil::getCardName) ?: R.string.card_name_japan_ic),
+                    null)
             }
         }
     }

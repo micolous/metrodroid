@@ -43,7 +43,7 @@ abstract class ClassicKeysImpl : ClassicKeys {
                 keys.values.flatten().filter { it !is ClassicSectorKey }.size
 
     private val keysJson: JsonArray
-        get() = jsonArray {
+        get() = buildJsonArray {
                 for ((sector, keys) in keys.entries.sortedBy { it.key }) {
                     keys.map { it.toJSON(sector) }.forEach {
                         +it
