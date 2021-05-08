@@ -24,7 +24,6 @@
 		9C8AC0C522D88C60005681DB /* SubscriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8AC0C422D88C60005681DB /* SubscriptionViewCell.swift */; };
 		9CA5821D22E52A1C004D579D /* ErrorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA5821C22E52A1C004D579D /* ErrorViewCell.swift */; };
 		9CC5F83722D825AC006E9856 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5F83622D825AC006E9856 /* TripCell.swift */; };
-		9CC7BA2822F6582700F45148 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 9CC7BA2722F6582700F45148 /* ZIPFoundation */; };
 		9CC7BA3322F7CD7A00F45148 /* Logos-NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CC7BA3222F7CD7A00F45148 /* Logos-NOTICE.txt */; };
 		9CC7BA3522F7CD8600F45148 /* Metrodroid-NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CC7BA3422F7CD8500F45148 /* Metrodroid-NOTICE.txt */; };
 		9CCEE1ED22E3D181007BF742 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CCEE1EB22E3D181007BF742 /* InfoPlist.strings */; };
@@ -37,6 +36,7 @@
 		9CFE481922E1068E0020A500 /* AdvancedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE481822E1068E0020A500 /* AdvancedCardViewController.swift */; };
 		9CFE481B22E1073B0020A500 /* HwInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE481A22E1073B0020A500 /* HwInfoViewController.swift */; };
 		9CFE481F22E10DAA0020A500 /* RawInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE481E22E10DAA0020A500 /* RawInfoViewController.swift */; };
+		B6301C1C2331FF99007B1BBB /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = B6301C1B2331FF99007B1BBB /* ZIPFoundation */; };
 		E7B1DFC422CCCE680061481F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1DFC322CCCE680061481F /* AppDelegate.swift */; };
 		E7B1DFC622CCCE680061481F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1DFC522CCCE680061481F /* ViewController.swift */; };
 		E7B1DFC922CCCE680061481F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B1DFC722CCCE680061481F /* Main.storyboard */; };
@@ -197,7 +197,7 @@
 			files = (
 				E7C4D74A22CF04B000E89028 /* metrolib.framework in Frameworks */,
 				9C095684230637BD007C6F79 /* MapKit.framework in Frameworks */,
-				9CC7BA2822F6582700F45148 /* ZIPFoundation in Frameworks */,
+				B6301C1C2331FF99007B1BBB /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +335,7 @@
 			);
 			name = metrodroid;
 			packageProductDependencies = (
-				9CC7BA2722F6582700F45148 /* ZIPFoundation */,
+				B6301C1B2331FF99007B1BBB /* ZIPFoundation */,
 			);
 			productName = metrodroid;
 			productReference = E7B1DFC022CCCE680061481F /* metrodroid.app */;
@@ -436,7 +436,7 @@
 			);
 			mainGroup = E7B1DFB722CCCE680061481F;
 			packageReferences = (
-				9CC7BA2622F6582700F45148 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				B6301C1A2331FF99007B1BBB /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = E7B1DFC122CCCE680061481F /* Products */;
 			projectDirPath = "";
@@ -678,6 +678,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A377NM2Z6V;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../build/xcode-frameworks";
@@ -695,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -741,6 +742,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A377NM2Z6V;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../build/xcode-frameworks";
@@ -752,7 +754,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -769,18 +771,17 @@
 				CODE_SIGN_ENTITLEMENTS = metrodroid/metrodroid.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A377NM2Z6V;
 				INFOPLIST_FILE = metrodroid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = au.id.micolous.metrodroid.phcoder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -791,18 +792,17 @@
 				CODE_SIGN_ENTITLEMENTS = metrodroid/metrodroid.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A377NM2Z6V;
 				INFOPLIST_FILE = metrodroid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = au.id.micolous.metrodroid.phcoder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -926,7 +926,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9CC7BA2622F6582700F45148 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+		B6301C1A2331FF99007B1BBB /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/weichsel/ZIPFoundation/";
 			requirement = {
@@ -937,9 +937,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9CC7BA2722F6582700F45148 /* ZIPFoundation */ = {
+		B6301C1B2331FF99007B1BBB /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9CC7BA2622F6582700F45148 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			package = B6301C1A2331FF99007B1BBB /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */

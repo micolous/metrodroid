@@ -75,18 +75,18 @@ Thanks to those who have [helped to make Metrodroid available in languages other
 
 Card / Agency | Location | Notes
 ------------- | -------- | -----
-[Amiibo][amiibo] | :earth_asia: _worldwide_ | :new: `IOS`
-[AT HOP][athop] | :new_zealand: Auckland, New Zealand | :new: :id: `IOS`
+[Amiibo][amiibo] | :earth_asia: _worldwide_ | :new: :apple:
+[AT HOP][athop] | :new_zealand: Auckland, New Zealand | :new: :id: :apple:
 [Beijing Municipal Card][beijing] | :cn: Beijing, China | :new:
 [bip!][bip] | :chile: Santiago de Chile, Chile | :new: :closed_lock_with_key: `MFC`
 [Bilhete Único][bu] | :brazil: São Paulo, Brazil | :closed_lock_with_key: `MFC`
 [BUS-IT][busit] | :new_zealand: Greater Hamilton (Waikato), New Zealand | :new: :closed_lock_with_key: `MFC`
-[Carta Mobile][pisa] | :it: Pisa, Italy | :new: `IOS`
+[Carta Mobile][pisa] | :it: Pisa, Italy | :new: :apple:
 [CharlieCard][charlie] | :us: Boston, MA, USA | :new: :closed_lock_with_key: `MFC`
 Cifial | :earth_africa: _worldwide_ | :new: `MFC`
-City Union | :cn: Mainland China | :new: `IOS`
-[Clipper][clipper] | :us: San Francisco, CA, USA | `IOS`
-[Compass][compass] | :canada: Vancouver, BC, Canada | :new: :one: `IOS`
+City Union | :cn: Mainland China | :new: :apple:
+[Clipper][clipper] | :us: San Francisco, CA, USA | :apple:
+[Compass][compass] | :canada: Vancouver, BC, Canada | :new: :one: :apple:
 [Crimea Trolleybus][crimea] | Crimea | :new: :closed_lock_with_key: `MFC`
 [Cubic Nextfare][nextfare] | :earth_americas: _many locations_ | :new: :closed_lock_with_key: `MFC`
 [EasyCard][easycard] | Taipei | :closed_lock_with_key: `MFC`
@@ -94,72 +94,72 @@ City Union | :cn: Mainland China | :new: `IOS`
 [Ekarta][ekarta] | :ru: Ekaterinburg, Russia | :new: :closed_lock_with_key: `MFC`
 [Electronic Barnaul][barnaul] | :ru: Barnaul, Russia | :new: :closed_lock_with_key: `MFC`
 [EMV][emv] | :earth_africa: _worldwide_ | :new:
-[Envibus][envibus] | :fr: Sophia Antipolis, France | :new: `IOS`
+[Envibus][envibus] | :fr: Sophia Antipolis, France | :new: :apple:
 [ERG][erg] | :earth_asia: _many locations_ | :new: :closed_lock_with_key: `MFC`
 [EZ-Link][ezlink] | :singapore: Singapore |
 [Go card][seqgo] | :australia: Brisbane and South East Queensland, Australia | :new: :closed_lock_with_key: `MFC`
 [GoCard][otago] | :new_zealand: Otago, including Greater Dunedin and Queenstown, New Zealand | :new: `MFC`
 [Go-to card][mspgoto] | :us: Minneapolis-St. Paul, MN, USA | :new: :closed_lock_with_key: `MFC`
-[Hafilat][] | :united_arab_emirates: Abu Dhabi, UAE | :new: `IOS`
-[Hop Fastpass][hfp] | :us: Portland, OR, USA | :new: :id: `IOS`
-[HSL][hsl], [Matkakortti][matka], [Waltti][] | :finland: Finland | `IOS`
-[IstanbulKart][istanbul] | :tr: Istanbul, Turkey | :new: :id: `IOS`
-[Kartu Multi Trip][kmt] | :indonesia: Jakarta, Indonesia | `KMT` `IOS`
+[Hafilat][] | :united_arab_emirates: Abu Dhabi, UAE | :new: :apple:
+[Hop Fastpass][hfp] | :us: Portland, OR, USA | :new: :id: :apple:
+[HSL][hsl], [Matkakortti][matka], [Waltti][] | :finland: Finland | :apple:
+[IstanbulKart][istanbul] | :tr: Istanbul, Turkey | :new: :id: :apple:
+[Kartu Multi Trip][kmt] | :indonesia: Jakarta, Indonesia | `KMT` :apple:
 [Kazan transport card][kazan] | :ru: Kazan, Russia | :new: :closed_lock_with_key: `MFC`
 [Kiev Metro][kievm] | :ukraine: Kiev, Ukraine | :new: :closed_lock_with_key: `MFC`
 [Kirov transport card][kirov] | :ru: Kirov, Russia | :new: :closed_lock_with_key: `MFC`
 [KomuterLink][komuterlink] | :malaysia: Malaysia | :new: :closed_lock_with_key: `MFC`
 [Krasnodar ETK][krasnodar] | :ru: Krasnodar, Russia | :new: :closed_lock_with_key: `MFC`
 [Leap][leap] | :ireland: Ireland | :new: :unlock:
-[Lisboa Viva][lisboa] | :portugal: Lisbon, Portugal | :new: `IOS`
+[Lisboa Viva][lisboa] | :portugal: Lisbon, Portugal | :new: :apple:
 [Manly Fast Ferry][manly] | :australia: Sydney, NSW, Australia | :new: :closed_lock_with_key: `MFC`
-[Metrocard][adl] | :australia: Adelaide, SA, Australia | :new: `IOS`
+[Metrocard][adl] | :australia: Adelaide, SA, Australia | :new: :apple:
 [Metrocard][chc] | :new_zealand: Christchurch, New Zealand | :new: :closed_lock_with_key: `MFC`
 [Metromoney][tbs] | :georgia: Tbilisi, Georgia | :new: :closed_lock_with_key: `MFC`
-[Mobib][mobib] | :belgium: Brussels, Belgium | :new: `IOS`
+[Mobib][mobib] | :belgium: Brussels, Belgium | :new: :apple:
 [MRT Jakarta][mrtj] | :indonesia: Jakarta, Indonesia | :new:
-[Myki][myki] | :australia: Melbourne (and surrounds), VIC, Australia | :new: :id: `IOS`
+[Myki][myki] | :australia: Melbourne (and surrounds), VIC, Australia | :new: :id: :apple:
 [MyWay][myway] | :australia: Australian Capital Territory, Australia | :new: :closed_lock_with_key: `MFC`
-[Navigo][navigo] | :fr: Paris, France | :new: `IOS`
+[Navigo][navigo] | :fr: Paris, France | :new: :apple:
 [NETS FlashPay][nets] | :singapore: Singapore |
-[Nol][] | :united_arab_emirates: Dubai, UAE | :new: :id: `IOS`
-[Octopus][octopus] | :hong_kong: Hong Kong | :new: `IOS`
-[Opal][opal] | :australia: Sydney (and surrounds), NSW, Australia | :new: `IOS`
-[Opus][opus] | :canada: Québec, Canada | :new: `IOS`
-[ORCA][orca] | :us: Seattle, WA, USA | `IOS`
+[Nol][] | :united_arab_emirates: Dubai, UAE | :new: :id: :apple:
+[Octopus][octopus] | :hong_kong: Hong Kong | :new: :apple:
+[Opal][opal] | :australia: Sydney (and surrounds), NSW, Australia | :new: :apple:
+[Opus][opus] | :canada: Québec, Canada | :new: :apple:
+[ORCA][orca] | :us: Seattle, WA, USA | :apple:
 [Orenburg EKG][orenburg] | :ru: Orenburg, Russia | :new: :closed_lock_with_key: `MFC`
-[OùRA][oura] | :fr: Grenoble, France | :new: `IOS`
+[OùRA][oura] | :fr: Grenoble, France | :new: :apple:
 [OV-chipkaart][ovc] | :netherlands: Netherlands | :closed_lock_with_key: `MFC`
 [Oyster][oyster] | :gb: London, United Kingdom | :new: :closed_lock_with_key: `MFC`
 Penza transport card | :ru: Penza, Russia | :new: :closed_lock_with_key: `MFC`
 [Podorozhnik][podoro] | :ru: Saint Petersburg, Russia | :new: :closed_lock_with_key: `MFC`
-[Rav-Kav][ravkav] | :israel: Israel | :new: `IOS`
+[Rav-Kav][ravkav] | :israel: Israel | :new: :apple:
 [Rejsekort][rejse] | :denmark: Denmark | :new: :closed_lock_with_key: `MFC`
 [RicaricaMi][ricarica] | :it: Milan, Italy | :new: :closed_lock_with_key: `MFC`
 [Samara ETK][samara] | :ru: Samara, Russia | :new: :closed_lock_with_key: `MFC`
 [Selecta][] | :fr: France | :new: `MFC`
-[Shenzhen Tong][shenzhen] | :cn: Shenzhen, Guangdong Province, China | :new: `IOS`
+[Shenzhen Tong][shenzhen] | :cn: Shenzhen, Guangdong Province, China | :new: :apple:
 [Siticard][siticard] | :ru: Nizhniy Novgorod, Russia | :new: :closed_lock_with_key: `MFC`
 [SLAccess][slaccess] | :sweden: Stockholm, Sweden | :new: :closed_lock_with_key: `MFC`
 [Smartride][smartride] | :new_zealand: Rotorua, New Zealand | :new: `MFC`
 [SmartRider][smartrider] | :australia: Western Australia, Australia | :new: :closed_lock_with_key: `MFC`
-[Snapper][snapper] | :new_zealand: Wellington, New Zealand | :new: `IOS`
+[Snapper][snapper] | :new_zealand: Wellington, New Zealand | :new: :apple:
 [Strelka][strelka] | :ru: Moscow, Russia | :closed_lock_with_key: :id: `MFC`
 [Strizh][strizh] | :ru: Izhevsk, Russia | :new: :closed_lock_with_key: `MFC`
 [Suica][suica], [ICOCA][icoca], [PASMO][pasmo] | :jp: Japan |
 [SunCard][suncard] | :us: Orlando, FL, USA | :new: :closed_lock_with_key: :id: `MFC`
-[TaM][tam] | :fr: Montpellier, France | :new: `IOS`
+[TaM][tam] | :fr: Montpellier, France | :new: :apple:
 [Tartu Bus][tartu] | :estonia: Tartu, Estonia | :new: :id: `MFC`
-[T-Money][tmoney] | :kr: South Korea | :new: `IOS`
+[T-Money][tmoney] | :kr: South Korea | :new: :apple:
 [TPF card][tpf] | :switzerland: Fribourg, Switzerland | :new: :id:
-[TransGironde][gironde] | :fr: Gironde, France | :new: `IOS`
+[TransGironde][gironde] | :fr: Gironde, France | :new: :apple:
 [Transit Access Pass][laxtap] | :us: Los Angeles, CA, USA | :new: :closed_lock_with_key: `MFC`
 [Troika][troika] | :ru: Moscow, Russia | :new: :closed_lock_with_key: `MFC`
-T-Union | :cn: Mainland China | :new: `IOS`
+T-Union | :cn: Mainland China | :new: :apple:
 [Umarsh][umarsh] | :ru: _multiple cities in Russia_ | :new: :closed_lock_with_key: `MFC`
-[Ventra][ventra] | :us: Chicago, IL, USA | :new: :one: `IOS`
+[Ventra][ventra] | :us: Chicago, IL, USA | :new: :one: :apple:
 [Warszawska Karta Miejska][warsaw] | :poland: Warsaw, Poland | :new: :id: :closed_lock_with_key: `MFC`
-[Wuhan Tong][wuhan] | :cn: Wuhan, Hubei Province, China | :new: `IOS`
+[Wuhan Tong][wuhan] | :cn: Wuhan, Hubei Province, China | :new: :apple:
 [Yaroslavl ETK][yaroslavl] | :ru: Yaroslavl, Russia | :new: :closed_lock_with_key: `MFC`
 [Yoshkar-Ola][yolatrans] | :ru: Yoshkar-Ola, Russia | :new: :closed_lock_with_key: `MFC`
 [Zolotaya Korona][zolotaya] | :ru: _multiple cities in Russia_ | :new: :closed_lock_with_key: `MFC`
@@ -176,7 +176,7 @@ Note                   | Meaning
 :id:                   | Only the card number can be read.
 `KMT`                  | Only new FeliCa-based cards can be read.
 :one:                  | Only single-use tickets can be read.
-`IOS`                  | Supported on [Metrodroid for iOS][ios].
+:apple:                | Supported on [Metrodroid for iOS][ios].
 
 This project **will only read data from the card itself**, without having to
 connect to the agency's back-office systems. In some cases, limited data is
