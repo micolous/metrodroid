@@ -108,6 +108,8 @@ class TroikaHybridTransitData (private val mTroika: TroikaTransitData,
     override val warning: String?
         get() = mTroika.warning
 
+    override fun getRawFields(level: RawLevel): List<ListItem>? = mTroika.debug
+
     private constructor(card: ClassicCard) : this(
             mTroika = TroikaTransitData(card),
             mPodorozhnik = if (PodorozhnikTransitData.FACTORY.check(card))

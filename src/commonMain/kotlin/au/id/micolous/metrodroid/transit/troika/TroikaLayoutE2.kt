@@ -6,10 +6,10 @@ import au.id.micolous.metrodroid.util.ImmutableByteArray
 // This layout is found on some newer multi-ride passes
 @Suppress("CanBeParameter")
 @Parcelize
-internal class TroikaLayoutE(val rawData: ImmutableByteArray,
-                             private val mTransportCode: Int = rawData.getBitsFromBuffer(163, 2),
-                             private val validityLengthMinutes : Int = rawData.getBitsFromBuffer(131, 20),
-                             private val validityStart : Int = rawData.getBitsFromBuffer(97, 16)) :
+internal class TroikaLayoutE2(val rawData: ImmutableByteArray,
+                              private val mTransportCode: Int = rawData.getBitsFromBuffer(163, 2),
+                              private val validityLengthMinutes : Int = rawData.getBitsFromBuffer(131, 20),
+                              private val validityStart : Int = rawData.getBitsFromBuffer(97, 16)) :
         TroikaBlock(
                 rawData,
                 mExpiryDate = convertDateTime1992(rawData.getBitsFromBuffer(71, 16), 0),
@@ -23,12 +23,12 @@ internal class TroikaLayoutE(val rawData: ImmutableByteArray,
                 mLastValidationTime = convertDateTime1992(validityStart, validityLengthMinutes
                         - rawData.getBitsFromBuffer(196, 20))) {
 
-    override fun getTransportType(getLast: Boolean): TroikaBlock.TroikaTransportType =
+    override fun getTransportType(getLast: Boolean): TroikaTransportType =
             when (mTransportCode) {
-                0 -> TroikaBlock.TroikaTransportType.NONE
-                1 -> TroikaBlock.TroikaTransportType.SUBWAY
-                2 -> TroikaBlock.TroikaTransportType.MONORAIL
-                3 -> TroikaBlock.TroikaTransportType.GROUND
-                else -> TroikaBlock.TroikaTransportType.UNKNOWN
+                0 -> TroikaTransportType.NONE
+                1 -> TroikaTransportType.SUBWAY
+                2 -> TroikaTransportType.MONORAIL
+                3 -> TroikaTransportType.GROUND
+                else -> TroikaTransportType.UNKNOWN
             }
 }

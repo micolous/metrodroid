@@ -20,7 +20,7 @@ class TroikaLayoutA(val rawData: ImmutableByteArray,
                 mLastTransportLeadingCode = rawData.getBitsFromBuffer(126, 2),
                 mLastTransportLongCode = rawData.getBitsFromBuffer(152, 8),
                 // 32 bits zero
-                // 32 bits checksum
+                mCheckSum = rawData.getHexString(8, 5).substring(1, 4),
                 mValidityEnd = convertDateTime2016(validityStart, rawData.getBitsFromBuffer(76, 19) - 1),
                 mValidityStart = convertDateTime2016(validityStart, 0)
                 // missing: expiry date

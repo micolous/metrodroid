@@ -24,6 +24,7 @@ import au.id.micolous.metrodroid.card.classic.ClassicCard
 import au.id.micolous.metrodroid.card.classic.UnauthorizedClassicSector
 import au.id.micolous.metrodroid.multi.*
 import au.id.micolous.metrodroid.transit.*
+import au.id.micolous.metrodroid.ui.HeaderListItem
 import au.id.micolous.metrodroid.ui.ListItem
 
 /**
@@ -31,36 +32,37 @@ import au.id.micolous.metrodroid.ui.ListItem
  */
 
 @Parcelize
-class TroikaTransitData(private val mBlocks: List<TroikaBlock>) : Parcelable {
+class TroikaTransitData(private val mBlocks: List<Pair<Int, TroikaBlock> >) : Parcelable {
 
     val serialNumber: String?
-        get() = mBlocks[0].serialNumber
+        get() = mBlocks[0].second.serialNumber
 
     val info: List<ListItem>?
-        get() = mBlocks.flatMap { it.info.orEmpty() }.ifEmpty { null }
+        get() = mBlocks.flatMap { (_, block) -> block.info.orEmpty() }.ifEmpty { null }
 
     val balance: TransitBalance
-        get() = mBlocks[0].balance ?: TransitCurrency.RUB(0)
+        get() = mBlocks[0].second.balance ?: TransitCurrency.RUB(0)
 
     val warning: String?
-        get() = if (mBlocks[0].balance == null && subscriptions.isEmpty())
+        get() = if (mBlocks[0].second.balance == null && subscriptions.isEmpty())
             Localizer.localizeString(R.string.troika_unformatted)
         else
             null
 
     val trips: List<Trip>
-        get() = mBlocks.flatMap { it.trips.orEmpty() }
+        get() = mBlocks.flatMap { (_, block) -> block.trips }
 
     val subscriptions: List<Subscription>
-        get() = mBlocks.mapNotNull { it.subscription }
+        get() = mBlocks.mapNotNull {  (_, block) -> block.subscription }
 
-    constructor(card: ClassicCard) : this(listOfNotNull(
-            decodeSector(card, 8),
-            decodeSector(card, 7),
-            decodeSector(card, 4),
-            decodeSector(card, 1)
+    val debug: List<ListItem>? get() =
+        mBlocks.flatMap {  (blockNum, block) -> listOf(HeaderListItem("Block $blockNum")) + block.debug }
+
+    constructor(card: ClassicCard) : this(
+            listOf(8, 7, 4, 1).mapNotNull {idx ->
+                decodeSector(card, idx)?.let { Pair(idx, it) }
+            }
         )
-    )
 
     companion object {
         internal val CARD_INFO = CardInfo(

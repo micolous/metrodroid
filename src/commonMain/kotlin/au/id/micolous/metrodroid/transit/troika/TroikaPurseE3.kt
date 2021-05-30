@@ -7,18 +7,18 @@ import au.id.micolous.metrodroid.transit.Subscription
 import au.id.micolous.metrodroid.transit.TransitBalance
 import au.id.micolous.metrodroid.transit.TransitBalanceStored
 import au.id.micolous.metrodroid.transit.TransitCurrency
+import au.id.micolous.metrodroid.ui.ListItem
 import au.id.micolous.metrodroid.util.ImmutableByteArray
 
 // This is e-purse layout
 @Parcelize
-internal class TroikaPurse(val rawData: ImmutableByteArray) : TroikaBlock(
+internal class TroikaPurseE3(val rawData: ImmutableByteArray) : TroikaBlock(
         rawData,
         mExpiryDate = convertDateTime1992(rawData.getBitsFromBuffer(61, 16), 0),
-        // 10 bits unknown
         // 41 bits zero
         mLastValidator = rawData.getBitsFromBuffer(128, 16),
         mLastValidationTime = convertDateTime2016(0, rawData.getBitsFromBuffer(144, 23)),
-// 4 bits zero
+        // 4 bits zero
         mLastTransfer = rawData.getBitsFromBuffer(171, 7),
         mLastTransportLeadingCode = rawData.getBitsFromBuffer(178, 2),
         mLastTransportLongCode = rawData.getBitsFromBuffer(180, 8),
@@ -26,9 +26,9 @@ internal class TroikaPurse(val rawData: ImmutableByteArray) : TroikaBlock(
             1 -> Localizer.localizeString(R.string.troika_fare_single)
             2 -> Localizer.localizeString(R.string.troika_fare_90mins)
             else -> null
-        }
-//12 bits zero
-//32 bits checksum
+        },
+        //12 bits zero
+        mCheckSum = rawData.getHexString(28, 4)
 ) {
 
     /**
@@ -44,4 +44,14 @@ internal class TroikaPurse(val rawData: ImmutableByteArray) : TroikaBlock(
 
     override val subscription: Subscription?
         get() = null
+
+    override val debug get() = super.debug + listOf(
+            ListItem("Ticket Type 2", "0x" + rawData.getBitsFromBuffer(77, 10).toString(16)),
+
+            // Always 0 so far
+            ListItem("A1", "0x" + rawData.getBitsFromBuffer(87, 9).toString(16)),
+            ListItem("A2", "0x" + rawData.getHexString(12, 4)),
+            ListItem("B", "0x" + rawData.getBitsFromBuffer(167, 4).toString(16)),
+            ListItem("C", "0x" + rawData.getBitsFromBuffer(212, 10).toString(16))
+    )
 }
