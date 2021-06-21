@@ -3,6 +3,7 @@
   stm.xml
 
   Copyright 2018 Etienne Dubeau
+  Copyright 2020 Aleksei Trubnikov
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -42,7 +43,7 @@
     <bus id="" logo="stm_local" name="29" />
     <bus id="" logo="stm_local" name="30" />
     <bus id="" logo="stm_local" name="31" />
-    <bus id="" logo="stm_local" name="32" />
+    <bus id="22" logo="stm_local" name="32" />
     <bus id="23" logo="stm_local" name="33" />
     <bus id="24" logo="stm_local" name="34" />
     <bus id="" logo="stm_local" name="36" />
@@ -65,7 +66,7 @@
     <bus id="" logo="stm_local" name="56" />
     <bus id="" logo="stm_local" name="57" />
     <bus id="" logo="stm_local" name="58" />
-    <bus id="" logo="stm_local" name="61" />
+    <bus id="44" logo="stm_local" name="61" />
     <bus id="" logo="stm_local" name="63" />
     <bus id="46" logo="stm_local" name="64" />
     <bus id="" logo="stm_local" name="66" />
@@ -157,10 +158,10 @@
     <bus id="" logo="stm_local" name="202" />
     <bus id="" logo="stm_local" name="203" />
     <bus id="" logo="stm_local" name="204" />
-    <bus id="" logo="stm_local" name="205" />
+    <bus id="145" logo="stm_local" name="205" />
     <bus id="" logo="stm_local" name="206" />
     <bus id="147" logo="stm_local" name="207" />
-    <bus id="" logo="stm_local" name="208" />
+    <bus id="148" logo="stm_local" name="208" />
     <bus id="149" logo="stm_local" name="209" />
     <bus id="151" logo="stm_local" name="211" />
     <bus id="" logo="stm_local" name="212" />
@@ -213,21 +214,24 @@
     <bus id="" logo="stm_express" name="439" />
     <bus id="" logo="stm_express" name="440" />
     <bus id="" logo="stm_express" name="444" />
+    <bus id="" logo="stm_express" name="445" />
     <bus id="" logo="stm_express" name="448" />
     <bus id="" logo="stm_express" name="449" />
     <bus id="" logo="stm_express" name="460" />
+    <bus id="" logo="stm_express" name="465" />
     <bus id="211" logo="stm_express" name="467" />
     <bus id="" logo="stm_express" name="468" />
     <bus id="" logo="stm_express" name="469" />
     <bus id="169" logo="stm_express" name="470" />
     <bus id="" logo="stm_express" name="475" />
+    <bus id="" logo="stm_express" name="480" />
     <bus id="" logo="stm_express" name="485" />
     <bus id="" logo="stm_express" name="486" />
-    <bus id="" logo="stm_express" name="487" />
+    <bus id="253" logo="stm_express" name="487" />
     <bus id="" logo="stm_express" name="491" />
     <bus id="255" logo="stm_express" name="495" />
     <bus id="256" logo="stm_express" name="496" />
-    <bus id="" logo="stm_shuttle" name="715" />
+    <bus id="257" logo="stm_shuttle" name="715" />
     <bus id="219" logo="stm_shuttle" name="747" />
     <bus id="" logo="stm_shuttle" name="777" />
     <bus id="" logo="stm_local" name="252" />

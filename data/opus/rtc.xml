@@ -3,6 +3,7 @@
   rtc.xml
 
   Copyright 2018 Etienne Dubeau
+  Copyright 2020 Aleksei Trubnikov
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -107,7 +108,7 @@
     <bus id="" logo="express" name="EXPRESS 239" />
     <bus id="62" logo="express" name="EXPRESS 250" />
     <bus id="63" logo="express" name="EXPRESS 251" />
-    <bus id="" logo="express" name="EXPRESS 253" />
+    <bus id="322" logo="express" name="EXPRESS 253" />
     <bus id="64" logo="express" name="EXPRESS 254" />
     <bus id="65" logo="express" name="EXPRESS 255" />
     <bus id="67" logo="express" name="EXPRESS 272" />
@@ -139,7 +140,7 @@
     <bus id="" logo="express" name="EXPRESS 374" />
     <bus id="" logo="express" name="EXPRESS 377" />
     <bus id="" logo="express" name="EXPRESS 380" />
-    <bus id="" logo="express" name="EXPRESS 381" />
+    <bus id="150" logo="express" name="EXPRESS 381" />
     <bus id="90" logo="express" name="EXPRESS 382" />
     <bus id="" logo="express" name="EXPRESS 384" />
     <bus id="94" logo="express" name="EXPRESS 391" />

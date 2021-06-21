@@ -50,6 +50,7 @@ object OpusLookup : En1545LookupSTR(OPUS_STR) {
     override val subscriptionMap: Map<Int, StringResource> = mapOf(
             0xb1 to R.string.monthly_subscription,
             0xb2 to R.string.weekly_subscription,
+            0xc9 to R.string.weekly_subscription,
             0x1c7 to R.string.single_trips
     )
 }

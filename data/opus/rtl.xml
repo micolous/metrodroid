@@ -3,6 +3,7 @@
   rtl.xml
 
   Copyright 2018 Etienne Dubeau
+  Copyright 2020 Aleksei Trubnikov
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -37,7 +38,7 @@
     <bus id="20" logo="" name="21" />
     <bus id="" logo="" name="22" />
     <bus id="" logo="" name="23" />
-    <bus id="" logo="" name="25" />
+    <bus id="295" logo="" name="25" />
     <bus id="" logo="" name="28" />
     <bus id="23" logo="" name="29" />
     <bus id="" logo="" name="30" />
@@ -124,7 +125,7 @@
     <bus id="" logo="" name="539" />
     <bus id="" logo="" name="540" />
     <bus id="" logo="" name="542" />
-    <bus id="" logo="" name="544" />
+    <bus id="368" logo="" name="544" />
     <bus id="" logo="" name="546" />
     <bus id="" logo="" name="547" />
     <bus id="" logo="" name="549" />

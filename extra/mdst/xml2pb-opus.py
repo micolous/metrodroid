@@ -56,10 +56,7 @@ for operator in root.iter('operator'):
   operator_pb = stations_pb2.Operator()
   operator_pb.name.local = operator.attrib['name']
   operator_pb.name.english = operator.attrib['name']
-  if operator.attrib['file'] == 'stm':
-    operator_pb.default_transport = stations_pb2.TRAIN
-  else:
-    operator_pb.default_transport = stations_pb2.BUS
+  operator_pb.default_transport = stations_pb2.BUS
   operators[operator_id] = operator_pb
   operator_xml_tree = ET.parse(os.path.join(DB_PATH, operator.attrib['file'] + '.xml'))
   operator_xml_root = operator_xml_tree.getroot()
@@ -73,6 +70,8 @@ for operator in root.iter('operator'):
       continue
     if line_name.startswith('METRO '):
       line_pb.transport = stations_pb2.METRO
+    if line_name.startswith('TRAIN '):
+      line_pb.transport = stations_pb2.TRAIN
 
     lines[(operator_id << 16)|int(line_id)] = line_pb
 

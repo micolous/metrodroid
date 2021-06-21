@@ -3,6 +3,7 @@
   stl.xml
 
   Copyright 2018 Etienne Dubeau
+  Copyright 2020 Aleksei Trubnikov
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -18,10 +19,10 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <stl>
-    <bus id="146" logo="" name="2" />
+    <bus id="89" logo="" name="2" />
     <bus id="" logo="" name="12" />
     <bus id="" logo="" name="17" />
-    <bus id="" logo="" name="20" />
+    <bus id="5" logo="" name="20" />
     <bus id="" logo="" name="22" />
     <bus id="" logo="" name="24" />
     <bus id="7" logo="" name="26" />
