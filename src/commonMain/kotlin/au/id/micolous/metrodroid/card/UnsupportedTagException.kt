@@ -34,7 +34,7 @@ class UnsupportedTagProtocolException(private val techList: List<String>, privat
 }
 
 class UnknownUltralightException : UnsupportedTagException() {
-    override val message get(): String = "Unknown Mifare Ultralight"
+    override val message get(): String = "Unknown MIFARE Ultralight"
 
     override val dialogMessage get() = Localizer.localizeString(R.string.unknown_ultralight_message)
 }

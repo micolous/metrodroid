@@ -2462,7 +2462,7 @@
         Supported technologies:\n
         %2$s
     </string>
-    <string name="unknown_ultralight_message">Unknown Mifare Ultralight tag</string>
+    <string name="unknown_ultralight_message">Unknown MIFARE Ultralight tag</string>
     <string name="nfc_connection_failed">NFC connection to %s failed</string>
     <!-- Translators: label above trips where date isn't known. -->
     <string name="unknown_date_title">Unknown date</string>
@@ -2508,7 +2508,7 @@
     -->
     <string name="card_name_easycard">EasyCard</string>
     <string name="show_debug_spans">Show debug colour for locale spans</string>
-    <string name="show_debug_spans_desc">Highlight default language in green, english in yellow and local language in
+    <string name="show_debug_spans_desc">Highlight default language in green, English in yellow and local language in
         blue
     </string>
 
@@ -2585,7 +2585,7 @@
     <string name="hotel_checkout">Check-out</string>
 
     <!-- Translators: "%s" is replaced with a file size including units -->
-    <string name="large_file_warning">The file you have chosen is large (%s) and may crash the application. Do you want to proceed?</string>
+    <string name="large_file_warning">The file you have chosen is large (%s) and may crash the app. Do you want to proceed?</string>
     <string name="large_file_yes">Load anyway (risk crashing)</string>
     <string name="large_file_no">Cancel (safe)</string>
     <string name="app_logo_description">Metrodroid logo</string>
