@@ -122,7 +122,7 @@ class EmvFactory : ISO7816ApplicationFactory {
             ImmutableByteArray.fromASCII("2PAY.SYS.DDF01")
     )
 
-    override val fixedAppIds get() = false    
+    override val fixedAppIds get() = false
 
     override suspend fun dumpTag(protocol: ISO7816Protocol,
                                  capsule: ISO7816ApplicationMutableCapsule,
@@ -130,7 +130,17 @@ class EmvFactory : ISO7816ApplicationFactory {
         feedbackInterface.updateStatusText(Localizer.localizeString(R.string.card_reading_emv))
         feedbackInterface.showCardType(EmvTransitFactory.CARD_INFO)
         feedbackInterface.updateProgressBar(0, 32)
-        capsule.dumpAllSfis(protocol, feedbackInterface, 0, 64)
+        var failed = 0
+        capsule.dumpAllSfis(protocol, feedbackInterface, 0, 64) { sfi, file ->
+            // Bail-out condition
+            if (file == null) {
+                failed++
+                // Android Pay drops the connection if we take too long.
+                (sfi == 3 && failed == 3)
+            } else {
+                false
+            }
+        }
 
         val fci = capsule.appFci
 
@@ -202,8 +212,8 @@ class EmvFactory : ISO7816ApplicationFactory {
                 TAG_TRANSACTION_DATE -> ImmutableByteArray.fromHex("180101")
                 // Transaction Type
                 TAG_TRANSACTION_TYPE -> ImmutableByteArray(1)
-                // Amount, Authorised: 1 cent
-                TAG_AMOUNT_AUTHORISED -> ImmutableByteArray.fromHex("000000000001")
+                // Amount, Authorised: 0 cents
+                TAG_AMOUNT_AUTHORISED -> ImmutableByteArray(6)
                 // Amount, Other: 0 cents
                 TAG_AMOUNT_OTHER -> ImmutableByteArray(6)
                 // Country: USA

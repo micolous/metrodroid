@@ -54,8 +54,14 @@ class ISO7816ApplicationMutableCapsule(val appFci: ImmutableByteArray?,
     suspend fun dumpFileSFI(protocol: ISO7816Protocol, sfi: Int, recordLen: Int): ISO7816File? {
         val data = try {
             protocol.readBinary(sfi)
+        } catch (e: ISOFileNotFoundException) {
+            // Stop processing, the file doesn't exist.
+            return null
+        } catch (e: ISOSecurityStatusNotSatisfied) {
+            // Stop processing, the file is locked.
+            return null
         } catch (e: Exception) {
-            null
+            null // but continue
         }
 
         val records : MutableMap<Int, ImmutableByteArray> = mutableMapOf()
@@ -82,11 +88,17 @@ class ISO7816ApplicationMutableCapsule(val appFci: ImmutableByteArray?,
         return f
     }
 
-    suspend fun dumpAllSfis(protocol: ISO7816Protocol, feedbackInterface: TagReaderFeedbackInterface, start: Int, total: Int) {
+    suspend fun dumpAllSfis(protocol: ISO7816Protocol,
+                            feedbackInterface: TagReaderFeedbackInterface,
+                            start: Int, total: Int,
+                            bailOut: ((sfi: Int, file: ISO7816File?) -> Boolean)? = null) {
         var counter = start
         for (sfi in 1..31) {
             feedbackInterface.updateProgressBar(counter++, total)
-            dumpFileSFI(protocol, sfi, 0)
+            val file = dumpFileSFI(protocol, sfi, 0)
+            if (bailOut != null && bailOut(sfi, file)) {
+                break
+            }
         }
     }
 

@@ -123,8 +123,6 @@ data class CEPASApplication(
             var isValid = false
             val numPurses = 16
 
-            capsule.dumpAllSfis(iso7816Tag, feedbackInterface, 0, 32)
-
             val cepasTag = CEPASProtocol(iso7816Tag)
 
             try {
